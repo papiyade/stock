@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stock-desktop"
+version = "1.0.0"
+description = "Application desktop de gestion de stock avec SQLite"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Stock Team"}]
+dependencies = []
+
+[project.scripts]
+stock-desktop = "stock_app.app:run_app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
